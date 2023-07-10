@@ -1,0 +1,15 @@
+.task-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    align-items: center;
+
+    .task-title{
+        width: 120px;
+    }
+    .btn-container{
+        display: flex;
+        gap: 10px;
+    }
+}

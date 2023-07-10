@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #7fa755;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(225, 233, 236);
+    padding: 50px;
+}
+
+button{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn-style-border{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #86d72f;
+    color: #86d72f;
+
+}
+
+.btn-style-bg{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #86d72f;
+    color: #fff;
+    border: 1px solid #86d72f;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+button:hover{
+    filter: brightness(95%);
+}
+
+
+@media screen and (max-width:400px) {
+
+    body{
+        padding: 5px;
+    }
+    
+}

@@ -1,0 +1,11 @@
+<div class="header-container">
+    <h1>🌴Daily Task</h1>
+    <div class="btn-container">
+        <app-button (buttonClick)="openModal()" [value]="'ADD NEW'" [class]="'btn-style-border'"></app-button>
+        <app-button [value]="'RESTART'" [class]="'btn-style-bg'" (buttonClick)="reset()"></app-button>
+    </div>
+</div>
+
+<ng-container  *ngIf="isShowModal">
+    <app-modal [title]="'Create'" (closeModal)="closeModal()"></app-modal>
+</ng-container>

@@ -1,0 +1,22 @@
+<div class="modal-container">
+    <h3>Please {{title}} Your Task</h3>
+    <p class="close" (click)="onCloseModal()">X</p>
+    <form [formGroup]="taskForm" >
+        <div>
+            <label for="title">Title:</label>
+            <input class="title" placeholder="Please enter your task" maxlength="30" type="text" id="title" formControlName="title" required>
+        </div>
+        <div>
+            <label for="title">Progress:</label>
+          <input type="range" min="0" max="100" value="50" id="progress" formControlName="progress" required>
+        </div>
+          <ng-container *ngIf="id===undefined">
+            <button type="submit" (click)="addTask()" [class]="'btn-style-bg'">Add Task</button>
+          </ng-container>
+          <ng-container *ngIf="id!==undefined">
+            <button type="submit" (click)="updateTask()" [class]="'btn-style-bg'">Update Task</button>
+          </ng-container>
+      </form>
+</div>
+
+<div (click)="onCloseModal()" class="overlay"></div>

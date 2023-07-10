@@ -1,0 +1,75 @@
+.modal-container{
+    width: 300px;
+    height: 250px;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 10px;
+    border: 2px solid #86d72f;
+    border-radius: 10px;
+    z-index: 4;
+
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .title{
+            border: none;
+            border: 1px solid #86d72f;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+
+        }
+
+        div{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.39);
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+}
+
+.close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: red;
+    cursor: pointer;
+    user-select: none;
+}
+
+.close:active{
+    transform: scale(.9);
+}
+
+input::placeholder{
+    color: #86d72fb0;
+}
+
+// input[type="range"]::-webkit-slider-runnable-track {
+//     background-color: #86d72f; /* Use the defined track color */
+//     border-radius: 15px;
+//   }

@@ -1,0 +1,13 @@
+<div class="tasks-container">
+    <p class="user-info" >Welcom back <span style="color: #86d72f;font-weight: bold;">@{{username}}</span></p>
+     <div class="task-block">
+        <ng-container *ngIf="items.getData().length===0">
+          <h1>Empty List!</h1>
+        </ng-container>
+       <ng-container *ngIf="items.getData().length!==0" >
+        <ng-container *ngFor="let item of items.getData()">
+          <app-task [data]="item"></app-task>
+        </ng-container>
+       </ng-container>
+     </div>
+</div>

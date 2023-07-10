@@ -1,0 +1,13 @@
+<div class="task-container">
+    <p class="task-title">{{data.emoji}} {{data.title}}</p>
+    <app-progress [progress]="data.progress"></app-progress>
+    <div class="btn-container">
+        <app-button [value]="'EDIT'" [class]="'btn-style-border'" (buttonClick)="editTask(data.id)"></app-button>
+        <app-button [value]="'DELETE'" [class]="'btn-style-bg'" (buttonClick)="deleteTask(data.id)"></app-button>
+    </div>
+</div>
+
+
+<ng-container  *ngIf="isShowModal">
+    <app-modal [title]="'Edit'" (closeModal)="closeModal()" [id]="data.id"></app-modal>
+</ng-container>

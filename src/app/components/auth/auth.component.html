@@ -1,0 +1,8 @@
+<div class="auth-container">
+  <h3>Please Enter Your Name</h3>
+   <input type="text" maxlength="20" placeholder="username" [(ngModel)]="username">
+   <ng-container *ngIf="trackLoginEvent>0">
+     <p>{{error}}</p>
+   </ng-container>
+   <app-button [value]="'Enter'" [class]="'btn-style-bg'" (buttonClick)="logIn()"></app-button>
+</div>
