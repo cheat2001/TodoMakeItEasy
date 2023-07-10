@@ -30,11 +30,14 @@ export class DataServiceService {
     this.saveData();
   }
 
-  editData(index: number, item: any): void {
+  editData(index: number,emoji:string, item: any): void {
+    console.log(item);
+    
     this.deleteData(index);
     this.saveData();
     const task = {
       id:index,
+      emoji:emoji,
       title: item.title,
       progress: item.progress
     };

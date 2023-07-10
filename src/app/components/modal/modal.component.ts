@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataServiceService } from 'src/app/services/data-service.service';
 import { v4 as uuidv4 } from 'uuid';
@@ -75,7 +75,7 @@ export class ModalComponent implements OnInit {
   }
 
   updateTask(){
-    this.dataService.editData(this.item[0].id,this.taskForm.value);
+    this.dataService.editData(this.item[0].id,this.item[0].emoji,this.taskForm.value);
     // this.onCloseModal();
   }
 }
